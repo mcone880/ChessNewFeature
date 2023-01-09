@@ -72,7 +72,7 @@ public class Main extends JFrame implements MouseListener
 	private BufferedImage image;
 	private Button start,wselect,bselect,WNewPlayer,BNewPlayer;
 	public static int timeRemaining=60;
-	public CheckBox gamemodeBox;
+	public JCheckBox gamemodeBox;
 	public static void main(String[] args){
 	
 	//variable initialization
@@ -111,6 +111,7 @@ public class Main extends JFrame implements MouseListener
     {
 		timeRemaining=60;
 		timeSlider = new JSlider();
+		gamemodeBox = new JCheckBox();
 		move="White";
 		wname=null;
 		bname=null;
@@ -135,7 +136,9 @@ public class Main extends JFrame implements MouseListener
 		timeSlider.setPaintLabels(true);
 		timeSlider.setPaintTicks(true);
 		timeSlider.addChangeListener(new TimeChange());
-		
+
+		//Checkbox Details
+		gamemodeBox.setText("Play 960");
 		
 		//Fetching Details of all Players
 		wplayer= Player.fetch_players();
@@ -256,8 +259,8 @@ public class Main extends JFrame implements MouseListener
 			}
 		showPlayer=new JPanel(new FlowLayout());  
 		showPlayer.add(timeSlider);
+		showPlayer.add(gamemodeBox);
 		JLabel setTime=new JLabel("Set Timer(in mins):"); 
-		gamemodeBox = new CheckBox("Play 960");
 		start=new Button("Start");
 		start.setBackground(Color.black);
 		start.setForeground(Color.white);
