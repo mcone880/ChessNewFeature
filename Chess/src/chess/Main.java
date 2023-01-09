@@ -122,7 +122,7 @@ public class Main extends JFrame implements MouseListener
 		wcombopanel=new JPanel();
 		Wnames=new ArrayList<String>();
 		Bnames=new ArrayList<String>();
-		gamemodeBox = new CheckBox("Play 960");
+
 		board.setMinimumSize(new Dimension(800,700));
 		ImageIcon img = new ImageIcon(this.getClass().getResource("icon.png"));
 		this.setIconImage(img.getImage());
@@ -257,6 +257,7 @@ public class Main extends JFrame implements MouseListener
 		showPlayer=new JPanel(new FlowLayout());  
 		showPlayer.add(timeSlider);
 		JLabel setTime=new JLabel("Set Timer(in mins):"); 
+		gamemodeBox = new CheckBox("Play 960");
 		start=new Button("Start");
 		start.setBackground(Color.black);
 		start.setForeground(Color.white);
