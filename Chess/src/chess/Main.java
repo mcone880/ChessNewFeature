@@ -72,7 +72,7 @@ public class Main extends JFrame implements MouseListener
 	private BufferedImage image;
 	private Button start,wselect,bselect,WNewPlayer,BNewPlayer;
 	public static int timeRemaining=60;
-	public CheckBox gamemodeBox = new CheckBox("Play 960");
+	public CheckBox gamemodeBox;
 	public static void main(String[] args){
 	
 	//variable initialization
@@ -122,6 +122,7 @@ public class Main extends JFrame implements MouseListener
 		wcombopanel=new JPanel();
 		Wnames=new ArrayList<String>();
 		Bnames=new ArrayList<String>();
+		gamemodeBox = new CheckBox("Play 960");
 		board.setMinimumSize(new Dimension(800,700));
 		ImageIcon img = new ImageIcon(this.getClass().getResource("icon.png"));
 		this.setIconImage(img.getImage());
